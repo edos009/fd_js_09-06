@@ -9,12 +9,18 @@ function MyArrayPrototype() {
     this[this.length] = elem;
     return ++this.length;
   };
+  this.pop = function () {
+    if (this.length === 0) {
+      return;
+    }
+    const lastElem = this[this.length - 1];
+    delete this[this.length - 1];
+    --this.length;
+    return lastElem;
+  };
 }
 
-const myArrayPrototype = new MyArrayPrototype();
-
-MyArray.prototype = myArrayPrototype;
-
+MyArray.prototype = new MyArrayPrototype();
 const myArr = new MyArray();
-myArr.push(7);
-console.log(myArr);
+// myArr.push(7);
+// console.log(myArr);
