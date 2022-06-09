@@ -26,4 +26,4 @@ function MyArrayPrototype() {
 MyArray.prototype = new MyArrayPrototype();
 const myArr = new MyArray(1,2,3,4,5);
 // myArr.push(7);
-console.log(myArr);
+// console.log(myArr);
