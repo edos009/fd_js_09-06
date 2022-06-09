@@ -2,6 +2,9 @@
 //Object with data
 function MyArray() {
   this.length = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    this.push(arguments[i]);
+  }
 }
 
 function MyArrayPrototype() {
@@ -21,6 +24,6 @@ function MyArrayPrototype() {
 }
 
 MyArray.prototype = new MyArrayPrototype();
-const myArr = new MyArray();
+const myArr = new MyArray(1,2,3,4,5);
 // myArr.push(7);
-// console.log(myArr);
+console.log(myArr);
