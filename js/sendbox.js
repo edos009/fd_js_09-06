@@ -40,3 +40,63 @@ Accumulator.prototype = new MyAccumulator();
 
 const accumulator = new Accumulator(50, 100);
 */
+
+//! Example
+// Кролики наследования прототипов с обьектами
+// const rabbit = {
+//   eat() {
+//     return (this.name ? this.name : "I'm") + " eating";
+//   },
+//   jump() {
+//     return (this.name ? this.name : "I'm") + " jumping";
+//   },
+// };
+
+// const rabbitPet = {
+//   name: "Pitter",
+//   petMe() {
+//     return this.name + "petting";
+//   },
+//   __proto__: rabbit,
+// };
+
+// const rabbitMagic = {
+//   say(word) {
+//     return this.name + " say " + word;
+//   },
+//   __proto__: rabbitPet,
+// };
+
+//! Example
+// Кролики наследования прототипов с конструктором
+/*
+function Rabbit() {
+  this.eat = function () {
+    return (this.name ? this.name : "I'm") + " eating";
+  };
+  this.jump = function () {
+    return (this.name ? this.name : "I'm") + " jumping";
+  };
+}
+
+function RabbitPet(name) {
+  this.name = name;
+  this.petMe = function () {
+    return this.name + "petting";
+  };
+}
+
+RabbitPet.prototype = new Rabbit();
+const rabbitPet1 = new RabbitPet("Pitter");
+
+function RabbitMagic(name) {
+  this.name = name;
+  this.say = function (word) {
+    return this.name + " say " + word;
+  };
+}
+
+RabbitMagic.prototype = new RabbitPet();
+const rabbitMagic1 = new RabbitMagic("Pitter");
+const rabbitMagic2 = new RabbitMagic("Pitter");
+*/
