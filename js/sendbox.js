@@ -100,3 +100,27 @@ RabbitMagic.prototype = new RabbitPet();
 const rabbitMagic1 = new RabbitMagic("Pitter");
 const rabbitMagic2 = new RabbitMagic("Pitter");
 */
+
+//! Example
+
+function Ledder() {
+  this.step = 0;
+}
+
+function LedderPrototype() {
+  this.up = function () {
+    this.step += 1;
+    return this
+  };
+  this.down = function () {
+    this.step -= 1;
+    return this;
+  };
+  this.showStep = function () {
+    return this.step;
+  };
+}
+
+Ledder.prototype = new LedderPrototype();
+
+const ledder1 = new Ledder();
