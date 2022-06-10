@@ -10,7 +10,7 @@
 // console.log(sum(1, 2, 3, 4, 5));
 
 //! Example
-
+/*
 function Accumulator(currentPower, maxPower) {
   this.currentPower = currentPower;
   this.maxPower = maxPower;
@@ -39,3 +39,4 @@ function MyAccumulator() {
 Accumulator.prototype = new MyAccumulator();
 
 const accumulator = new Accumulator(50, 100);
+*/
